@@ -1,0 +1,32 @@
+<div style="margin-left: 30%;">
+  <br/>
+  <div style="display: flex; flex-direction: row;" align="center">
+    <div align="center">
+      <img src="/assets/imagenes_proyecto/funko.png" width="500px">
+    </div>
+    <div align="center">
+      <img src="/assets/imagenes_proyecto/pop-deadpool.gif" width="200px">
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<form class="form-group col" style="margin-left: 35%;">
+  <div class="form-group col-md-3">
+    <label>Usuario<span style="color:red">*</span></label>
+    <input type="text" name="Usuario" id="usuario" placeholder="Usuario" class="form-control" [(ngModel)]="nombre_introducido">
+  </div>
+  <br/>
+  <div class="form-group col-md-3">
+    <label>Contraseña<span style="color:red">*</span></label>
+    <input type="password" name="Contrasena" id="contrasena" placeholder="Contraseña" class="form-control" [(ngModel)]="contrasena_introducida">
+  </div>
+  <br/>
+  <p>¿No tienes todavía una cuenta? </p><a class="nav-link" href="/register">Regístrate ahora</a>
+  <br/>
+  <div class="form-group col-md-3">
+    <button class="btn btn-light" style="background-color: #91e4fb;" (click)="comprobarDatos()">Confirmar</button>
+  </div>
+</form>
+

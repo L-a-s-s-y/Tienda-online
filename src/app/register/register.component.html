@@ -1,0 +1,94 @@
+<br/>
+
+<div class="form-group row">
+  <form class="form-group col" style="margin-left: 20%;">
+
+    <div class="form-group row">
+      <div class="form-group col-md-4">
+        <label>Nombre <span style="color: red;">*</span></label>
+        <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control" [(ngModel)]="nombre">  
+      </div>
+      <div class="form-group col-md-4">
+        <label>Apellido <span style="color: red;">*</span></label>
+        <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control" [(ngModel)]="apellido">
+      </div>
+    </div>
+  
+    <br/>
+  
+    <div class="form-group col-md-4">
+      <label>Usuario <span style="color: red;">*</span></label>
+        <input type="text" name="usuario" id="usuario" placeholder="Usuario" class="form-control" [(ngModel)]="usuario">
+    </div>
+  
+    <br/>
+  
+    <div class="form-group row">
+      <div class="form-group col-md-4">
+        <label>Contraseña <span style="color: red;">*</span></label>
+        <input type="password" name="contrasena" id="contrasena" placeholder="Contraseña" class="form-control" [(ngModel)]="contrasena">  
+      </div>
+      <div class="form-group col-md-4">
+        <label>Confirmar contraseña <span style="color: red;">*</span></label>
+        <input type="password" name="conf_contrasena" id="conf_contrasena" placeholder="Confirmar contraseña" class="form-control" [(ngModel)]="conf_contrasena">
+      </div>
+    </div>
+  
+    <br/>
+  
+    <div class="form-group col-md-8">
+      <label>Correo electrónico <span style="color: red;">*</span></label>
+        <input type="text" name="email" id="email" placeholder="Correo electrónico" class="form-control" [(ngModel)]="email">
+    </div>
+  
+    <br/>
+  
+    <div class="form-group row">
+      <div class="form-group col-md-4">
+        <label>Dirección <span style="color: red;">*</span></label>
+        <input type="text" name="direccion" id="direccion" placeholder="Dirección" class="form-control" [(ngModel)]="direccion">  
+      </div>
+      <div class="form-group col-md-4">
+        <label>Código Postal <span style="color: red;">*</span></label>
+        <input type="text" name="cp" id="cp" placeholder="Código Postal" class="form-control" [(ngModel)]="cp">
+      </div>
+    </div>
+  
+    <br/>
+  
+    <div class="form-group row">
+      <div class="form-group col-md-4">
+        <label>Ciudad <span style="color: red;">*</span></label>
+        <input type="text" name="ciudad" id="ciudad" placeholder="Ciudad" class="form-control" [(ngModel)]="ciudad">  
+      </div>
+      <div class="form-group col-md-4">
+        <label>País <span style="color: red;">*</span></label>
+        <input type="text" name="pais" id="pais" placeholder="País" class="form-control" [(ngModel)]="pais">
+      </div>
+    </div>
+  
+    <br/>
+  
+    <div class="form-group col-md-8">
+        <label>
+          <input type="checkbox" name="terminos_condiciones" id="terminos_condiciones" (click)="aceptarTerminos()">
+          He leído y acepto los <a class="nav-link">Términos y Condiciones de servicio</a>
+        </label>
+        <label>
+          <input type="checkbox" name="politica_privacidad" id="politica_privacidad" (click)="aceptarPrivacidad()">
+          He leído y acepto la <a class="nav-link">Política de privacidad</a>
+        </label>      
+    </div>
+  
+    <br/>
+    <br/>
+  
+    <button class="btn btn-light" style="background-color: #91e4fb;" (click)="verificarDatos()">Confirmar</button>
+  </form>
+  <div class="form-group col">
+    <br/><br/>
+    <br/><br/>
+    <br/><br/>
+    <img src="/assets/imagenes_proyecto/funko.png" width="500px">
+  </div>
+</div>

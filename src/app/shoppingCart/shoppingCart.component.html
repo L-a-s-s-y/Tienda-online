@@ -1,0 +1,76 @@
+<div class="container-fluid" style="background-color: #91e4fb; text-align: center;">
+  <br>
+  <hr>
+  <br><br><br>
+  <div style="display: flex; align-items: center;">
+    <h1 style="margin: 0 auto; color: #606060;">
+      1. Cesta de la compra
+    </h1>
+    <h1 style="margin: 0 auto; opacity: 60%; color: #606060;">
+      2. Detalles del envío
+    </h1>
+    <h1 style="margin: 0 auto; opacity: 60%; color: #606060;">
+      3. Método de pago
+    </h1>
+  </div>
+  <br><br><br>
+</div>
+
+<br><br>
+<div style="display: flex;">
+  <h2 style="margin: 0 auto; color:#606060;" align="right">Resumen del pedido</h2>
+  <h2 style="margin: 0 auto; color:#606060;" align="left">Shopping Cart</h2>
+</div>
+
+<br>
+<div style="display: flex;">
+  
+  <div style="margin: 0 auto;" align="right">
+    <p style="font-size: 30px;" align="center">Subtotal &Tab; {{subtotal}}&euro;</p>
+    <p style="font-size: 30px;" align="center">Gastos de envío &Tab; GRATIS</p>
+    <p style="font-size: 30px;" align="center">IVA &Tab; {{iva}}&euro;</p>
+    <hr>
+    <p style="font-size: 30px;" align="center">TOTAL &Tab; {{total}}&euro;</p>
+  </div>
+  <div style="margin: 0 auto;" align="left">
+    <table *ngFor="let producto of compra; let i=index">
+      <tr>
+        <td>
+          <img src="{{producto.product.url_imagen}}" width="200px">
+        </td>
+        &nbsp;&nbsp;
+        <td>
+          <h5 style="color: #606060;">{{producto.product.nombre}}</h5>
+          <h5 style="color: #606060;">{{producto.product.precio}}&euro;</h5>
+        </td>
+        &nbsp;&nbsp;
+        <td>
+          <input type="number" [(ngModel)]="producto.num_unidades">
+        </td>
+        &nbsp;&nbsp;
+        <td>
+          <button (click)="eliminarProducto(i)">
+            <img src="/assets/imagenes_proyecto/papelera.png" width="50px">
+          </button>
+        </td>
+      </tr>
+    </table>
+    <hr>
+    <div *ngIf="compra.length != 0">
+      <button class="btn btn btn-light" type="submit" style="color: #606060;" (click)="cancelarTramite()"> Cancelar</button>
+      &nbsp;&nbsp;&nbsp;
+      <button class="btn btn btn-dark" type="submit" style="background-color: #606060;" (click)="continuarTramite()">Continuar</button>
+      </div>
+  </div>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<footer class="container-fluid" style="background-color: #91e4fb;">
+    <nav class="navbar navbar-expand-sm navbar-light" style="margin-left:40%">
+      <a class="nav-link" href="">Home</a>
+      <a class="nav-link" href="" style="margin-left: 10%;">About</a>
+      <a class="nav-link" href="/shop" style="margin-left: 10%;">Shop</a>
+    </nav>
+    <p align="center" style="color: #606060;">&copy; POP! Impact Inc.</p>
+</footer>

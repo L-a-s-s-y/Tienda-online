@@ -1,0 +1,63 @@
+<div class="container-fluid" style="background-color: #91e4fb; text-align: center;">
+  <br>
+  <hr>
+  <br><br><br>
+  <div style="display: flex; align-items: center;">
+    <h1 style="margin: 0 auto; opacity: 60%; color: #606060;">
+      1. Cesta de la compra
+    </h1>
+    <h1 style="margin: 0 auto; opacity: 60%; color: #606060;">
+      2. Detalles del envío
+    </h1>
+    <h1 style="margin: 0 auto; color: #606060;">
+      3. Método de pago
+    </h1>
+  </div>
+  <br><br><br>
+</div>
+
+<br><br>
+<div style="display: flex;">
+  <h2 style="margin: 0 auto; color:#606060;" align="right">Resumen del pedido</h2>
+  <h2 style="margin: 0 auto; color:#606060;" align="left">Método de pago</h2>
+</div>
+
+<br>
+<div style="display: flex;">
+  <div style="margin: 0 auto;" align="left">
+    <p style="font-size: 30px;" align="center">Subtotal {{subtotal}}&euro;</p>
+    <p style="font-size: 30px;" align="center">IVA {{iva}}&euro;</p>
+    <hr>
+    <p style="font-size: 30px;" align="center">TOTAL {{total}}&euro;</p>
+  </div>
+  <br>
+  <div style="margin: 0 auto;" align="right">
+    <div align="left">
+      <input type="radio" name="metodo_pago" (click)="seleccionarTarjeta()"> <span style="color: #606060; font-weight: bold; font-size: larger;"> Tarjeta de crédito</span> <br> <br>
+      <input type="text" name="num_tarjeta" placeholder="0000 0000 0000 0000" [disabled]="pago_paypal"> <br><br>
+      <input type="date" name="fecha_pago" [disabled]="pago_paypal"> &nbsp; <input type="text" name="CVV" placeholder="CVV" [disabled]="pago_paypal">
+      <br><br>
+      <hr>
+      <input type="radio" name="metodo_pago" (click)="seleccionarPaypal()"> <span style="color: #606060; font-weight: bold; font-size: larger;"> PayPal</span> <br> <br>
+    </div>
+  </div>
+</div>
+
+<div align="center" style="align-items: center;">
+  <button class="btn btn btn-light" type="submit" style="color: #606060;" (click)="cancelarTramite()"> Cancelar</button>
+  &nbsp;&nbsp;&nbsp;
+  <button class="btn btn btn-dark" type="submit" style="background-color: #909090;" (click)="pasoAtras()">Volver atrás</button>
+  &nbsp;&nbsp;&nbsp;
+  <button class="btn btn btn-dark" type="submit" style="background-color: #606060;" (click)="continuarTramite()">Tramitar pedido</button>
+</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<footer class="container-fluid" style="background-color: #91e4fb;">
+    <nav class="navbar navbar-expand-sm navbar-light" style="margin-left:40%">
+      <a class="nav-link" href="">Home</a>
+      <a class="nav-link" href="" style="margin-left: 10%;">About</a>
+      <a class="nav-link" href="/shop" style="margin-left: 10%;">Shop</a>
+    </nav>
+    <p align="center" style="color: #606060;">&copy; POP! Impact Inc.</p>
+</footer>

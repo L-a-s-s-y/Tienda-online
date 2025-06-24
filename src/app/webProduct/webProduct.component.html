@@ -1,0 +1,64 @@
+<table align="center">
+    <tr>
+        <th></th>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <th>
+            <h1 style="color: #606060;">{{productos[indice].nombre}}</h1>
+        </th>
+    </tr>
+    <tr>
+        <td>
+            <img src="{{productos[indice].url_imagen}}" width="400px">
+        </td>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <td>
+            <div class="form-goup row">
+                <h3 style="color: #606060;">{{productos[indice].precio}}&euro;</h3>
+                <input type="text" placeholder="Número de uds." #unidades>
+                &nbsp;
+                <button style="color: #606060;" (click)="anadirCarrito(unidades.value)">Añadir al carrito</button>
+            </div>
+        </td>
+    </tr>
+</table>
+<br><br>
+<hr>
+
+<h1 align="center" style="color: #606060;">Los clientes que vieron este producto también vieron</h1>
+<table>
+    <tr>
+        <td>
+            <a href="/product/{{p1}}">
+                <img src="{{productos[p1].url_imagen}}" width="400px" style="margin-left: 200px;">
+            </a>
+        </td>
+        <td>
+            <a href="/product/{{p2}}">
+                <img src="{{productos[p2].url_imagen}}" width="400px" style="margin-left: 50%;">
+            </a>
+        </td>
+        <td>
+            <a href="/product/{{p3}}">
+            <img src="{{productos[p3].url_imagen}}" width="400px" style="margin-left: 90%;">
+            </a>
+        </td>
+    </tr>
+</table>
+
+<br><br>
+<hr>
+
+<h1 align="center" style="color: #606060;">Comentarios</h1>
+<br><br>
+<p align="center" style="color: #606060;">No hay comentarios todavía :(</p>
+
+<br><br>
+
+<footer class="container-fluid" style="background-color: #91e4fb;">
+    <nav class="navbar navbar-expand-sm navbar-light" style="margin-left:40%">
+      <a class="nav-link" href="">Home</a>
+      <a class="nav-link" href="" style="margin-left: 10%;">About</a>
+      <a class="nav-link" href="/shop" style="margin-left: 10%;">Shop</a>
+    </nav>
+    <p align="center" style="color: #606060;">&copy; POP! Impact Inc.</p>
+  </footer>
